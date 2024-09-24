@@ -1,5 +1,5 @@
 "use client"
-import { cn } from "@/lib/utils"
+import { cn } from "@/utils/cn"
 import { BackgroundGradientAnimation } from "./BaclgroundGradientAnimation"
 import { GridGlobe } from "./GridGlobe"
 import Lottie from "react-lottie"
@@ -58,7 +58,7 @@ export const BentoGridItem = ({
         className
       )}
       style={{
-        background: "rgb(2,0,36)",
+        background: "rgb(4,7,29)",
         backgroundColor:
           "linear-gradient(90deg, rgba(2,0,36,0.9332107843137255) 4%, rgba(2,0,36,1) 24%, rgba(161,80,37,1) 53%, rgba(40,9,9,0.9976365546218487) 100%, rgba(255,0,0,0.76234243697479) 100%) ",
       }}
@@ -89,10 +89,10 @@ export const BentoGridItem = ({
         {/* Gradient Section */}
         {id === 6 && (
           <BackgroundGradientAnimation>
-            <div
+            {/* <div
               className='absolute z-50 
              items-center flex justify-center text-white font-bold'
-            />
+            /> */}
           </BackgroundGradientAnimation>
         )}
         <div
