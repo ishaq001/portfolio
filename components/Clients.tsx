@@ -12,7 +12,7 @@ const Clients = () => {
         Kind words from
         <span className='text-purple'> satisfied clients</span>
       </h1>
-      <div className='flex flex-col items-center justify-center max-lg:mt-10'>
+      <div className='flex flex-col items-center justify-center mt-10 max-lg:mt-10'>
         <InfiniteMovingCards
           items={testimonials}
           className=''

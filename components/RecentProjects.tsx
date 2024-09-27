@@ -4,29 +4,29 @@ import React from "react"
 import { FaLocationArrow } from "react-icons/fa"
 import dynamic from "next/dynamic"
 
-const PinContainer = dynamic(() => import("./ui/3d-pin"), { ssr: false })
+import PinContainer from "./ui/3d-pin"
 
 const RecentProjects = () => {
   return (
     <div
-      className='py-20'
+      className='pb-20 pt-40'
       id='projects'
     >
       <h1 className='heading'>
         A small selection
         <span className='text-purple'> recent projects</span>
       </h1>
-      <div className='flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10'>
+      <div className='flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-6 mt-5'>
         {projects.map(({ link, id, title, des, img, iconLists }) => (
           <div
             key={id}
-            className='sm:h-[41rem] h-[25rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]'
+            className='sm:h-[28rem] h-[21rem] lg:min-h-[30rem] flex items-center justify-center sm:w-[400px] w-[80vw]'
           >
             <PinContainer
-              title={title}
+              title={link}
               href={link}
             >
-              <div className='relative flex items-center justify-center sm:w-[570px] w-[80vw] overflow-hidden sm:h-[40vh] h-[30vh] mb-10'>
+              <div className='relative flex items-center justify-center sm:w-[400px] w-[50vw] overflow-hidden sm:h-[40vh] h-[20vh] lg:h-[30vh] mb-10'>
                 <div className='relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]'>
                   <img
                     src='./bg.png'
@@ -52,7 +52,7 @@ const RecentProjects = () => {
                     <div
                       key={icon}
                       className='border border-white/[0.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center'
-                      style={{ transform: `translate(-${5 * index * 2}px)` }}
+                      style={{ transform: `translateX(-${5 * index * 2}px)` }}
                     >
                       <img
                         src={icon}
